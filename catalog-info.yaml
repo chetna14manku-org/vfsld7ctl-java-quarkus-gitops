@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vfsld7ctl-java-quarkus-gitops
+  description: This is GitOps manifest for vfsld7ctl-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=vfsld7ctl-java-quarkus
+    backstage.io/kubernetes-id: vfsld7ctl-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/vfsld7ctl-java-quarkus-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vfsld7ctl-java-quarkus
